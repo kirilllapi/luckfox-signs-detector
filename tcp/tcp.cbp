@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="tcp" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/tcp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/tcp" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O3" />
+					<Add directory="../opencv_pc/include/opencv4" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lopencv_core" />
+					<Add option="-lopencv_highgui" />
+					<Add option="-lopencv_imgcodecs" />
+					<Add option="-lopencv_imgproc" />
+					<Add option="-L/home/user/test/proj/barcode-reader-luckfox/opencv_pc/lib" />
+					<Add library="../opencv_pc/lib/libopencv_core.so" />
+					<Add library="../opencv_pc/lib/libopencv_highgui.so" />
+					<Add library="../opencv_pc/lib/libopencv_imgcodecs.so" />
+					<Add library="../opencv_pc/lib/libopencv_imgproc.so" />
+					<Add directory="../opencv_pc/lib" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
