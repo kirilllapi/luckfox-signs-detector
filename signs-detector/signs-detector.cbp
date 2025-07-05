@@ -30,7 +30,7 @@
 				<Linker>
 					<Add option="-s" />
 					<Add option="-lpthread" />
-					<Add option="-L/home/vebst/ADAS/opencv-mobile-4.10.0-luckfox-pico/lib" />
+					<Add option="-L../opencv-mobile-4.10.0-luckfox-pico/lib" />
 					<Add option="-lopencv_core" />
 					<Add option="-lopencv_imgproc" />
 					<Add option="-lopencv_highgui" />
@@ -40,16 +40,20 @@
 					<Add directory="../opencv-mobile-4.10.0-luckfox-pico/bin" />
 				</Linker>
 				<ExtraCommands>
-					<Add after="adb push /home/vebst/ADAS/signs-detector/bin/Release/signs-detector /root" />
+					<Add after="adb push /home/vebst/luckfox-signs-detector/signs-detector/bin/Release/signs-detector /root" />
 				</ExtraCommands>
 			</Target>
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="include/Image.h" />
+		<Unit filename="Image.h" />
+		<Unit filename="include/ProcessingImage.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Image.cpp" />
+		<Unit filename="src/Image.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/ProcessingImage.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

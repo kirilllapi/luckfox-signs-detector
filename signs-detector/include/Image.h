@@ -1,16 +1,40 @@
-#ifndef IMAGE_H
-#define IMAGE_H
+#ifndef IMAGE_H_INCLUDED
+#define IMAGE_H_INCLUDED
 
+#include <stdio.h>
 
-class Image
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+typedef enum
 {
-    public:
-        Image();
-        virtual ~Image();
+    cn_grayscale = 1,
+    cn_rgb = 3
+} channel;
 
-    protected:
+typedef struct image_mat_structure
+{
+    unsigned char *data;
+    unsigned int width;
+    unsigned int height;
+    channel cn;
+} *image_mat;
 
-    private:
-};
+/// @brief Сообщение об ошибке
+void print_error(const char *message);
 
-#endif // IMAGE_H
+/// @brief Сообщение в лог
+void print_log(const char *message);
+
+/// @brief Создание изображения
+image_mat new_image(unsigned int width, unsigned int height, channel channels);
+
+/// @brief Освобождение изображения
+void free_image(image_mat image);
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif // IMAGE_H_INCLUDED

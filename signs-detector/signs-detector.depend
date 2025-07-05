@@ -2,11 +2,9 @@
 1751730724 source:/home/vebst/ADAS/signs-detector/main.cpp
 	<iostream>
 
-1751734981 source:/home/vebst/luckfox-signs-detector/signs-detector/main.cpp
+1751739511 source:/home/vebst/luckfox-signs-detector/signs-detector/main.cpp
 	<iostream>
-	<opencv2/core/core.hpp>
-	<opencv2/highgui/highgui.hpp>
-	<opencv2/imgproc/imgproc.hpp>
+	"Image.h"
 
 1722693744 /home/vebst/luckfox-signs-detector/opencv-mobile-4.10.0-luckfox-pico/include/opencv4/opencv2/core/core.hpp
 	"opencv2/core.hpp"
@@ -219,5 +217,57 @@
 1751731203 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Image.cpp
 	"Image.h"
 
-1751734980 /home/vebst/luckfox-signs-detector/signs-detector/include/Image.h
+1751740176 /home/vebst/luckfox-signs-detector/signs-detector/include/Image.h
+	<stdio.h>
+
+1751737432 source:/home/vebst/luckfox-signs-detector/signs-detector/Image.c
+	"Image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdlib.h>
+	"log.h"
+
+1751740176 /home/vebst/luckfox-signs-detector/signs-detector/Image.h
+	<stdio.h>
+
+1751737306 /home/vebst/luckfox-signs-detector/signs-detector/log.h
+
+1751740324 source:/home/vebst/luckfox-signs-detector/signs-detector/src/ProcessingImage.cpp
+	"ProcessingImage.h"
+
+1751740339 /home/vebst/luckfox-signs-detector/signs-detector/include/ProcessingImage.h
+	"Image.h"
+	<cstdint>
+	<cstring>
+	<cmath>
+
+1751737359 source:/home/vebst/luckfox-signs-detector/signs-detector/log.c
+	<stdio.h>
+	<stdlib.h>
+
+1751737359 source:/home/vebst/luckfox-signs-detector/signs-detector/Log.c
+	<stdio.h>
+	<stdlib.h>
+
+1751738433 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Log.cpp
+	"Log.h"
+
+1751738747 /home/vebst/luckfox-signs-detector/signs-detector/include/Log.h
+	<string>
+	<fstream>
+	<iostream>
+	<cstdlib>
+
+1751741170 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Image.c
+	"Image.h"
+	<stdlib.h>
+
+1751740762 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Segmentation.cpp
+	"Segmentation.h"
+
+1751740770 /home/vebst/luckfox-signs-detector/signs-detector/include/Segmentation.h
+	"Image.h"
+	<cstdint>
+	<cstring>
+	<cmath>
 
