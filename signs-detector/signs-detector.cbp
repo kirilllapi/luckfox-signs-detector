@@ -47,13 +47,17 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="Image.h" />
+		<Unit filename="include/Image.h" />
 		<Unit filename="include/ProcessingImage.h" />
+		<Unit filename="include/Segmentation.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Image.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/ProcessingImage.cpp" />
+		<Unit filename="src/Segmentation.cpp" />
+		<Unit filename="tcp.cpp" />
+		<Unit filename="tcp.hpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

@@ -30,7 +30,7 @@
 					<Add option="-lopencv_highgui" />
 					<Add option="-lopencv_imgcodecs" />
 					<Add option="-lopencv_imgproc" />
-					<Add option="-L/home/user/test/proj/barcode-reader-luckfox/opencv_pc/lib" />
+					<Add option="-L../opencv_pc/lib" />
 					<Add library="../opencv_pc/lib/libopencv_core.so" />
 					<Add library="../opencv_pc/lib/libopencv_highgui.so" />
 					<Add library="../opencv_pc/lib/libopencv_imgcodecs.so" />

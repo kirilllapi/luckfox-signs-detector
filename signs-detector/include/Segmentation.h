@@ -16,6 +16,7 @@ class Segmentation
         static void set_adaptive_coff(uint32_t, uint32_t);
         static void analize_hists(image_mat);
         static void rgb_to_ihsl_mask(const image_mat, image_mat);
+        static void apply_mask(image_mat, image_mat, image_mat*);
 };
 
 #endif // SEGMENTATION_H

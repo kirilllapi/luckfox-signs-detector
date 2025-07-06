@@ -239,3 +239,54 @@ void Segmentation::rgb_to_ihsl_mask(const image_mat image_src, image_mat image_d
         }
     }
 }
+
+
+void Segmentation::apply_mask(image_mat image_src, image_mat mask, image_mat *image_seg)
+{
+    if (!image_src || !mask || !image_seg || !(*image_seg))
+    {
+        fprintf(stderr, "apply_mask: invalid input parameters\n");
+        return;
+    }
+
+    if (image_src->width != mask->width || image_src->height != mask->height)
+    {
+        fprintf(stderr, "apply_mask: source image and mask sizes do not match\n");
+        return;
+    }
+
+    // Предполагаем, что mask — одноканальное изображение (1 канал)
+    // и image_src — цветное (3 канала) или с любым числом каналов
+    // Результат записываем в image_seg
+
+    unsigned int width = image_src->width;
+    unsigned int height = image_src->height;
+    unsigned int channels = image_src->cn;
+
+    // Проходим по всем пикселям
+    for (unsigned int y = 0; y < height; y++)
+    {
+        for (unsigned int x = 0; x < width; x++)
+        {
+            unsigned int idx_img = (y * width + x) * channels;
+            unsigned int idx_mask = y * width + x;
+
+            // Если маска ненулевая — копируем пиксель из исходника
+            if (mask->data[idx_mask] != 0)
+            {
+                for (unsigned int c = 0; c < channels; c++)
+                {
+                    (*image_seg)->data[idx_img + c] = image_src->data[idx_img + c];
+                }
+            }
+            else
+            {
+                // Иначе обнуляем пиксель в результате
+                for (unsigned int c = 0; c < channels; c++)
+                {
+                    (*image_seg)->data[idx_img + c] = 0;
+                }
+            }
+        }
+    }
+}

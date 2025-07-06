@@ -66,7 +66,7 @@ int main() {
     {
         std::vector<cv::Mat> images;
 
-        for (int i = 0; i < 2; ++i)
+        for (int i = 0; i < 1; ++i)
         {
             // Получаем размер изображения
             uint32_t imgSizeNet;
@@ -113,11 +113,9 @@ int main() {
         }
 
         // Если оба изображения успешно получены, отображаем
-        if (images.size() == 2) {
-            //cv::imshow("ZXING", images[0]);
-            cv::imshow("BITMAP", images[1]);
+        if (images.size() == 1)
+        {
             cv::imshow("CAMERA", images[0]);
-
         }
 
         if (cv::waitKey(1) == 27) break;

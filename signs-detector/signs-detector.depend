@@ -2,9 +2,17 @@
 1751730724 source:/home/vebst/ADAS/signs-detector/main.cpp
 	<iostream>
 
-1751739511 source:/home/vebst/luckfox-signs-detector/signs-detector/main.cpp
+1751745897 source:/home/vebst/luckfox-signs-detector/signs-detector/main.cpp
 	<iostream>
 	"Image.h"
+	"ProcessingImage.h"
+	"Segmentation.h"
+	<pthread.h>
+	<opencv2/core/core.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
+	<unistd.h>
+	"tcp.hpp"
 
 1722693744 /home/vebst/luckfox-signs-detector/opencv-mobile-4.10.0-luckfox-pico/include/opencv4/opencv2/core/core.hpp
 	"opencv2/core.hpp"
@@ -262,12 +270,23 @@
 	"Image.h"
 	<stdlib.h>
 
-1751740762 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Segmentation.cpp
+1751743852 source:/home/vebst/luckfox-signs-detector/signs-detector/src/Segmentation.cpp
 	"Segmentation.h"
 
-1751740770 /home/vebst/luckfox-signs-detector/signs-detector/include/Segmentation.h
+1751743874 /home/vebst/luckfox-signs-detector/signs-detector/include/Segmentation.h
 	"Image.h"
 	<cstdint>
 	<cstring>
 	<cmath>
+
+1751741463 source:/home/vebst/luckfox-signs-detector/signs-detector/tcp.cpp
+	"tcp.hpp"
+
+1751741881 /home/vebst/luckfox-signs-detector/signs-detector/tcp.hpp
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<opencv2/core/core.hpp>
+	<opencv2/highgui/highgui.hpp>
+	<opencv2/imgproc/imgproc.hpp>
 
